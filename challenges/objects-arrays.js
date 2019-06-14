@@ -13,7 +13,7 @@ diet: 'carnivorous',
 weight: '7000kg',
 length: '12m',
 period: 'Late Cretaceous',
-roar: function(){
+roar(){
   return "RAWERSRARARWERSARARARRRR!";
 }
 }
@@ -120,7 +120,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 let animalNames = [];
-zooAnimals.forEach(function(currentvalue){
+zooAnimals.forEach(currentvalue =>{
   animalNames.push("Name: "+currentvalue.animal_name +", Scientific: "+currentvalue.scientific_name);
 });
 console.log(animalNames);
@@ -132,7 +132,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 let lowerCase = [];
-lowerCase = zooAnimals.map(function(currentvalue){
+lowerCase = zooAnimals.map(currentvalue =>{
   return currentvalue.animal_name.toLowerCase();
   });
 console.log(lowerCase); 
@@ -143,7 +143,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 let lowerPopulation = [];
-lowerPopulation = zooAnimals.filter(function(currentvalue){
+lowerPopulation = zooAnimals.filter(currentvalue =>{
   return currentvalue.population < 5;
   });
 console.log(lowerPopulation);
